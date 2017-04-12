@@ -1,0 +1,47 @@
+@relation Trains_Database
+
+@attribute number_of_cars integer [3, 5]
+@attribute number_of_different_loads integer [1, 4]
+@attribute car2_num_wheels integer [2, 3]
+@attribute car2_length {short, long}
+@attribute car2_shape {closedrect, dblopnrect, ellipse, engine, hexagon, jaggedtop, openrect, opentrap, slopetop, ushaped}
+@attribute car2_loads integer [0, 3]
+@attribute car2_load_shape {circlelod, hexagonlod, rectanglod, trianglod}
+@attribute car3_num_wheels integer [2, 3]
+@attribute car3_length {short, long}
+@attribute car3_shape {closedrect, dblopnrect, ellipse, engine, hexagon, jaggedtop, openrect, opentrap, slopetop, ushaped}
+@attribute car3_loads integer [0, 3]
+@attribute car3_load_shape {circlelod, hexagonlod, rectanglod, trianglod}
+@attribute car4_num_wheels integer [2, 3]
+@attribute car4_length {short, long}
+@attribute car4_shape {closedrect, dblopnrect, ellipse, engine, hexagon, jaggedtop, openrect, opentrap, slopetop, ushaped}
+@attribute car4_loads integer [0, 3]
+@attribute car4_load_shape {circlelod, hexagonlod, rectanglod, trianglod}
+@attribute car5_num_wheels integer [2, 3]
+@attribute car5_length {short, long}
+@attribute car5_shape {closedrect, dblopnrect, ellipse, engine, hexagon, jaggedtop, openrect, opentrap, slopetop, ushaped}
+@attribute car5_loads integer [0, 3]
+@attribute car5_load_shape {circlelod, hexagonlod, rectanglod, trianglod}
+@attribute rectangle_next_to_rectangle {0, 1}
+@attribute rectangle_next_to_triangle {0, 1}
+@attribute rectangle_next_to_hexagon {0, 1}
+@attribute rectangle_next_to_circle {0, 1}
+@attribute triangle_next_to_triangle {0, 1}
+@attribute triangle_next_to_hexagon {0, 1}
+@attribute triangle_next_to_circle {0, 1}
+@attribute hexagon_next_to_hexagon {0, 1}
+@attribute hexagon_next_to_circle {0, 1}
+@attribute circle_next_to_circle {0, 1}
+@attribute class {east, west}
+
+@data
+5, 4, 2, long, openrect, 3, rectanglod, 2, short, slopetop, 1, trianglod, 3, long, openrect, 1, hexagonlod, 2, short, openrect, 1, circlelod, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, east
+4, 3, 2, short, ushaped, 1, trianglod, 2, short, opentrap, 1, rectanglod, 2, short, closedrect, 2, circlelod, ?, ?, ?, ?, ?, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, east
+4, 2, 2, short, openrect, 1, circlelod, 2, short, hexagon, 1, trianglod, 3, long, closedrect, 1, trianglod, ?, ?, ?, ?, ?, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, east
+5, 2, 2, short, opentrap, 1, trianglod, 2, short, dblopnrect, 1, trianglod, 2, short, ellipse, 1, rectanglod, 2, short, openrect, 1, rectanglod, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, east
+4, 3, 2, short, dblopnrect, 1, trianglod, 3, long, closedrect, 1, rectanglod, 2, short, closedrect, 1, circlelod, ?, ?, ?, ?, ?, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, east
+3, 2, 2, long, closedrect, 3, circlelod, 2, short, openrect, 1, trianglod, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, west
+4, 2, 2, short, dblopnrect, 1, circlelod, 2, short, ushaped, 1, trianglod, 2, long, jaggedtop, 0, ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, west
+3, 2, 3, long, closedrect, 1, rectanglod, 2, short, ushaped, 1, circlelod, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, west
+5, 2, 2, short, opentrap, 1, circlelod, 2, long, jaggedtop, 1, rectanglod, 2, short, openrect, 1, rectanglod, 2, short, opentrap, 1, circlelod, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, west
+3, 1, 2, short, ushaped, 1, rectanglod, 2, long, openrect, 2, rectanglod, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, west

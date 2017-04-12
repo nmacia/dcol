@@ -1,0 +1,70 @@
+@relation analcatdata-bondrate-class0
+@attribute Population integer [506875,17953372]
+@attribute Per_capita_income integer [10697,22003]
+@attribute Household_income integer [42225,80087]
+@attribute Discretionary_income integer [34133,58222]
+@attribute Publics_in_top_10{0,1,2,3,4,5,6,7,8,9}
+@attribute Nonprofits_in_top_10{0,1,2,3,4,5}
+@attribute For_profits_in_top_10{1,2,3,4,5,6,7,8,9}
+@attribute Utilities_in_top_10{0,1,2}
+@attribute Region{Midwest,Northeast,South,West}
+@attribute State_capital{No,Yes}
+@attribute Rating{(1)_AAA,groupClass}
+@data
+686688,16851,56800,44173,1,3,5,1,Northeast,No,groupClass
+2833511,17688,56098,47557,4,1,4,1,South,Yes,groupClass
+781572,17182,46426,44274,7,0,3,0,South,Yes,groupClass
+543477,12675,49696,38850,0,3,7,0,West,No,groupClass
+2382172,17116,61695,46170,2,3,4,1,South,No,groupClass
+907810,15600,49945,40852,5,1,3,1,South,No,groupClass
+3783817,19974,68411,53703,4,3,3,0,Northeast,Yes,groupClass
+1189288,15094,50659,38545,6,0,4,0,Northeast,No,groupClass
+506875,13546,46195,38545,5,2,3,0,South,No,groupClass
+8065633,19408,66300,54128,5,0,5,0,Midwest,No,groupClass
+1744124,16801,54870,44464,4,1,4,1,Midwest,No,groupClass
+2759823,16116,56848,41841,5,3,2,0,Midwest,No,groupClass
+1377419,16697,43811,43830,5,1,4,0,Midwest,Yes,(1)_AAA
+3885415,18900,57704,50727,3,1,6,0,South,No,(1)_AAA
+951270,15973,51551,41611,3,2,5,0,Midwest,No,groupClass
+1848319,18600,58114,46059,1,0,7,1,West,Yes,groupClass
+4665236,17256,58890,46466,4,3,3,0,Midwest,No,groupClass
+?,17642,49546,44655,3,2,5,0,South,No,(1)_AAA
+591610,10697,42225,35842,0,1,7,2,South,No,groupClass
+688399,15502,52007,43447,2,4,4,0,Midwest,No,groupClass
+942091,15697,48929,39458,2,1,7,0,South,No,(1)_AAA
+1123678,20853,69989,55108,1,1,7,1,Northeast,Yes,groupClass
+836231,18705,74744,58222,2,2,5,1,West,Yes,groupClass
+3711043,18045,56795,50509,2,0,7,1,South,No,groupClass
+906727,15351,50836,40630,6,1,3,0,South,No,groupClass
+1566280,17487,56286,45301,5,1,4,0,Midwest,No,groupClass
+604816,15616,44052,39198,5,2,3,0,South,No,groupClass
+14531529,16271,71029,49481,4,1,5,0,West,No,groupClass
+741459,15986,49228,41338,0,1,9,0,West,No,groupClass
+513117,15580,47622,40803,6,3,1,0,South,Yes,groupClass
+952662,15874,50905,40893,4,2,4,0,South,No,groupClass
+981747,15337,52543,42057,6,2,2,0,South,No,groupClass
+3192582,14294,55316,40424,4,2,3,1,South,No,groupClass
+1607183,17447,55757,46247,0,2,7,1,Midwest,No,groupClass
+804219,19634,65474,51639,0,5,5,0,Northeast,No,groupClass
+17953372,18906,67201,50414,3,2,4,1,Northeast,No,groupClass
+1396107,14825,51376,41696,8,0,2,0,South,No,groupClass
+958839,14151,46056,36899,6,2,2,0,South,Yes,groupClass
+5899345,18837,63701,51337,0,3,7,0,Northeast,No,groupClass
+2122101,15166,50740,39385,4,1,5,0,West,Yes,groupClass
+2242798,16024,52108,40047,3,2,5,0,Northeast,No,groupClass
+916270,15043,52340,39932,0,5,5,0,Northeast,Yes,groupClass
+735480,17642,49546,44655,4,1,4,1,South,Yes,(1)_AAA
+865640,17040,60197,44093,0,1,8,1,South,Yes,groupClass
+1002410,16471,61594,44022,4,1,5,0,Northeast,No,groupClass
+1481102,16663,54026,44394,0,3,7,0,West,Yes,groupClass
+1302099,13605,46632,39251,9,0,1,0,South,No,groupClass
+2498016,16485,56542,47163,7,2,1,0,West,No,groupClass
+6253311,22003,80087,55590,4,1,5,0,West,No,groupClass
+2559164,20387,57884,51147,0,3,7,0,West,No,groupClass
+2444099,16999,58697,44785,0,2,7,0,Midwest,No,groupClass
+659864,15077,51716,40823,1,4,4,1,Northeast,No,groupClass
+614128,14770,51398,39206,3,4,3,0,Midwest,No,groupClass
+666880,13514,42998,34133,6,2,2,0,West,No,groupClass
+708954,14253,49050,36318,3,2,5,0,South,No,groupClass
+2464124,18113,61029,47792,4,2,4,0,Midwest,Yes,(1)_AAA
+709705,17018,56517,46317,3,3,3,1,Northeast,No,groupClass

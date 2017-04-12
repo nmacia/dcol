@@ -1,0 +1,101 @@
+@relation Postoperative_Patient_Database-class0
+@attribute l_core{high,mid,low}
+@attribute l_surf{high,mid,low}
+@attribute l_o2{excellent,good,fair,poor}
+@attribute l_bp{high,mid,low}
+@attribute surf_stbl{stable,mod-stable,unstable}
+@attribute core_stbl{stable,mod-stable,unstable}
+@attribute bp_stbl{stable,mod-stable,unstable}
+@attribute comfort integer [0,20]
+@attribute class{I,groupClass}
+@data
+mid,low,excellent,mid,stable,stable,stable,15,groupClass
+mid,high,excellent,high,stable,stable,stable,10,groupClass
+high,low,excellent,high,stable,stable,mod-stable,10,groupClass
+mid,low,good,high,stable,unstable,mod-stable,15,groupClass
+mid,mid,excellent,high,stable,stable,stable,10,groupClass
+high,low,good,mid,stable,stable,unstable,15,groupClass
+mid,low,excellent,high,stable,stable,mod-stable,5,groupClass
+high,mid,excellent,mid,unstable,unstable,stable,10,groupClass
+mid,high,good,mid,stable,stable,stable,10,groupClass
+mid,low,excellent,mid,unstable,stable,mod-stable,10,groupClass
+mid,mid,good,mid,stable,stable,stable,15,groupClass
+mid,low,good,high,stable,stable,mod-stable,10,groupClass
+high,high,excellent,high,unstable,stable,unstable,15,groupClass
+mid,high,good,mid,unstable,stable,mod-stable,10,groupClass
+mid,low,good,high,unstable,unstable,stable,15,groupClass
+high,high,excellent,high,unstable,stable,unstable,10,groupClass
+low,high,good,high,unstable,stable,mod-stable,15,groupClass
+mid,low,good,high,unstable,stable,stable,10,groupClass
+mid,high,good,mid,unstable,stable,unstable,15,groupClass
+mid,mid,good,mid,stable,stable,stable,10,groupClass
+low,high,good,mid,unstable,stable,stable,15,groupClass
+low,mid,excellent,high,unstable,stable,unstable,10,groupClass
+mid,mid,good,mid,unstable,stable,unstable,15,groupClass
+mid,mid,good,mid,unstable,stable,stable,10,groupClass
+high,high,good,mid,stable,stable,mod-stable,10,groupClass
+low,mid,good,mid,unstable,stable,stable,10,groupClass
+high,mid,good,low,stable,stable,mod-stable,10,groupClass
+low,mid,excellent,high,stable,stable,mod-stable,10,groupClass
+mid,mid,excellent,mid,stable,stable,unstable,15,groupClass
+mid,mid,good,mid,unstable,stable,unstable,10,groupClass
+mid,mid,good,high,unstable,stable,stable,10,groupClass
+low,low,good,mid,unstable,stable,unstable,10,groupClass
+mid,mid,excellent,high,unstable,stable,mod-stable,10,groupClass
+mid,low,good,mid,stable,stable,stable,10,groupClass
+low,mid,excellent,high,stable,stable,mod-stable,10,groupClass
+mid,mid,good,mid,stable,stable,stable,10,groupClass
+low,mid,excellent,mid,stable,stable,stable,10,groupClass
+low,low,good,mid,unstable,stable,unstable,10,groupClass
+low,low,good,mid,stable,stable,stable,7,groupClass
+mid,mid,good,high,unstable,stable,mod-stable,10,groupClass
+low,low,good,mid,unstable,stable,stable,10,groupClass
+low,mid,good,mid,stable,stable,stable,15,groupClass
+high,high,good,high,unstable,stable,stable,15,groupClass
+mid,mid,good,mid,stable,stable,stable,10,groupClass
+low,low,excellent,mid,stable,stable,stable,10,groupClass
+low,mid,good,mid,unstable,stable,stable,10,groupClass
+low,mid,good,high,unstable,stable,stable,?,I
+mid,mid,excellent,mid,unstable,stable,stable,10,groupClass
+high,high,excellent,high,stable,stable,unstable,?,groupClass
+mid,high,good,low,unstable,stable,stable,10,groupClass
+mid,high,good,mid,unstable,mod-stable,mod-stable,10,groupClass
+low,high,excellent,mid,unstable,stable,stable,10,groupClass
+mid,low,excellent,high,unstable,stable,unstable,10,groupClass
+mid,mid,good,mid,unstable,stable,mod-stable,10,groupClass
+high,high,excellent,mid,unstable,stable,mod-stable,10,groupClass
+mid,mid,good,mid,unstable,stable,stable,15,groupClass
+high,mid,good,high,stable,stable,unstable,15,groupClass
+mid,low,good,high,unstable,stable,mod-stable,10,groupClass
+low,low,good,high,stable,stable,stable,10,groupClass
+mid,high,good,mid,stable,stable,mod-stable,10,groupClass
+mid,high,good,mid,unstable,stable,unstable,10,groupClass
+mid,low,excellent,high,stable,stable,stable,10,groupClass
+mid,mid,good,mid,stable,stable,unstable,10,groupClass
+mid,low,excellent,mid,stable,stable,unstable,10,groupClass
+high,mid,excellent,mid,unstable,unstable,unstable,10,groupClass
+mid,mid,good,high,stable,stable,stable,10,groupClass
+mid,low,excellent,mid,unstable,stable,stable,10,groupClass
+mid,mid,excellent,mid,unstable,stable,stable,10,groupClass
+mid,mid,excellent,high,stable,stable,stable,10,groupClass
+mid,mid,excellent,low,stable,stable,stable,10,groupClass
+mid,low,excellent,mid,unstable,unstable,unstable,?,groupClass
+low,low,excellent,mid,stable,stable,stable,10,groupClass
+mid,mid,excellent,mid,stable,stable,mod-stable,10,groupClass
+mid,mid,excellent,high,stable,stable,stable,10,groupClass
+mid,low,excellent,high,stable,stable,mod-stable,10,groupClass
+low,mid,good,mid,stable,stable,unstable,10,groupClass
+mid,mid,excellent,mid,stable,stable,mod-stable,10,groupClass
+mid,mid,excellent,mid,stable,stable,unstable,10,groupClass
+mid,mid,excellent,mid,unstable,unstable,stable,10,groupClass
+mid,mid,good,high,stable,stable,stable,10,groupClass
+mid,mid,excellent,mid,stable,stable,stable,15,groupClass
+mid,mid,excellent,mid,stable,stable,stable,10,groupClass
+mid,low,good,mid,stable,stable,unstable,10,I
+high,mid,excellent,mid,unstable,stable,unstable,5,groupClass
+mid,mid,excellent,mid,stable,stable,unstable,10,groupClass
+mid,mid,excellent,mid,unstable,stable,stable,10,groupClass
+mid,mid,excellent,mid,unstable,stable,stable,15,groupClass
+mid,mid,good,mid,unstable,stable,stable,15,groupClass
+mid,mid,excellent,mid,unstable,stable,stable,10,groupClass
+mid,mid,good,mid,unstable,stable,stable,15,groupClass

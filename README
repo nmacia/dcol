@@ -1,0 +1,18 @@
+
+The application consists of five folders:
+
+	1. Data: Contains a collection of data sets in KEEL format (KEEL format is an extension of WEKA format). 
+
+        2. Documentation: Contains the documentation for the library.
+
+	3. Help: Contains html help and a pdf with the manual reference. 
+
+	4. Source: Contains the source code. To compile the code, type 'make', which will generate an executable named 'dcol'.
+	For instructions on how to run the code, please see the documentation.
+
+	5. Test: Contains a collection of two-class data sets used for some testing and a script to run and replicate the experiments.
+
+
+This file was created in April, 2009
+Last modified December, 2010
+Albert Orriols-Puig and Nuria Macia

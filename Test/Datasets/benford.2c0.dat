@@ -1,0 +1,18 @@
+@relation analcatdata-benford-class0
+@attribute Return{126,148,169,175,200,266,273,432,735}
+@attribute Large.return{92,108,124,136,162,228,232,387,698}
+@attribute Small.return{34,37,38,39,40,41,45}
+@attribute Return.thirty{434,508,550,642,734,859,963,1302,2392}
+@attribute Large.return.thirty{303,380,429,514,623,738,836,1172,2276}
+@attribute Small.return.thirty{111,116,121,127,128,130,131}
+@attribute Digit{1,groupClass}
+@data
+735,698,37,2392,2276,116,1
+432,387,45,1302,1172,130,groupClass
+273,232,41,963,836,127,groupClass
+266,228,38,859,738,121,groupClass
+200,162,38,734,623,111,groupClass
+175,136,39,642,514,128,groupClass
+169,124,45,550,429,121,groupClass
+148,108,40,508,380,128,groupClass
+126,92,34,434,303,131,groupClass
