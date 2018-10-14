@@ -502,12 +502,12 @@ void InputOptions::parseInput ( int argc, char **argv ) {
             }
         
         }
-        else if ( strlen ( argv[i] ) == 6 && strcmp ( *argv, "-latex" ) ) {
+        else if ( strlen ( argv[i] ) == 6 && strcmp ( argv[i], "-latex" ) == 0 ) {
 
            latexOutput = true;
 
         }
-        else if ( strlen ( argv[i] ) == 4 && strcmp ( *argv, "-xml" ) ) {
+        else if ( strlen ( argv[i] ) == 4 && strcmp ( argv[i], "-xml" ) == 0 ) {
 
             XMLOutput = true;
 
@@ -535,7 +535,7 @@ void InputOptions::parseInput ( int argc, char **argv ) {
         }
         else if ( strlen ( argv[i] ) == 4 && argv[i][0] == '-' && argv[i][1] == 'n' &&
                   argv[i][2] == 'R' && argv[i][3] == 'U' ) {
-        
+
             replaceUnknownValues = false;
         
         }
