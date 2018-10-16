@@ -64,7 +64,7 @@ class Dataset {
 public:
 
     /** Representation of the unknown value in an example. */
-    static float UNKNOWN_VALUE;
+    static char UNKNOWN_VALUE;
 
 protected:
 

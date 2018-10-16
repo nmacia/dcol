@@ -33,7 +33,7 @@ along with DCoL.  If not, see <http://www.gnu.org/licenses/>.
 #include "Dataset.h"
 
 
-float Dataset::UNKNOWN_VALUE = 100000.;
+char Dataset::UNKNOWN_VALUE = '?';
 
 
 Dataset::Dataset ( std::string fileName, bool readAttInfo, bool repUnknownVal ) {
