@@ -188,11 +188,10 @@ float* runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& op
     float  measureResult;
     float  measureResultAux;
     float* results = new float [ NUM_RESULTS ];
-    float* attResults = new float [ NUM_ATT_RESULTS ];
-    float* ret = new float [2]
+    float** attResults = new float* [ NUM_ATT_RESULTS ];
 
-    for (int i=0; int < NUM_ATT_RESULTS, ++i) {
-        attResults[i] = new float [dSet->getNumberOfAttributes()]
+    for (int i=0; i < NUM_ATT_RESULTS; ++i) {
+        attResults[i] = new float [dSet->getNumberOfAttributes()];
     }
 
     int    att, i;
@@ -241,13 +240,13 @@ float* runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& op
         for ( i = 0; i < dSet->getNumberOfAttributes (); i++ ) {
             measureResultAux += vectorResults[i] / dSet->getNumberOfExamples ();
             std::cout << "      > Discriminant power of attribute " << i << ": " << ( vectorResults[i] / dSet->getNumberOfExamples() ) << std::endl;
-            attResults[ AF3 ][i] = vectorResults[i] / dSet->getNumberOfExamples()
+            attResults[ AF3 ][i] = vectorResults[i] / dSet->getNumberOfExamples();
         }
 
         std::cout <<  "      > Maximum (individual) efficiency of attributes: " << measureResult << std::endl;
         delete [] vectorResults;
         results[ CF3 ] = measureResult;
-        attResults[ AF3 ] = vectorResults
+        attResults[ AF3 ] = vectorResults;
 
         if ( opts.getF4 () ) {
             std::cout <<  "      > Collective efficiency of attributes: " << measureResultAux << std::endl;
@@ -402,9 +401,8 @@ float* runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& op
     delete dSet;
 
     std::cout << std::endl << "  > END OF COMPLEXITY MEASURES PROCESSING " << std::endl << std::endl;
-    ret[0] = results
-    ret[1] = attResults
-    return ret;
+    
+    return results;
 
 } // end runMeasuresForASingleDataset
 
