@@ -402,7 +402,7 @@ float* runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& op
 
     std::cout << std::endl << "  > END OF COMPLEXITY MEASURES PROCESSING " << std::endl << std::endl;
     
-    return results;
+    return Results(results, attResults);
 
 } // end runMeasuresForASingleDataset
 

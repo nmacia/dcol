@@ -40,6 +40,15 @@ along with DCoL.  If not, see <http://www.gnu.org/licenses/>.
 
 */
 
+class Results {
+  public:
+    Results(float*, float**);
+    const float* results;
+    const float** attResults;
+
+    Results(float*, float**) : results(results), attResults(attResults) {}
+};
+
 
 class ResultsContainer {
 
