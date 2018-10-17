@@ -42,11 +42,11 @@ along with DCoL.  If not, see <http://www.gnu.org/licenses/>.
 
 class Results {
   public:
-    Results(float*, float**);
-    const float* results;
-    const float** attResults;
+    float* dsResults;
+    float** attResults;
 
-    Results(float*, float**) : results(results), attResults(attResults) {}
+    Results(float* dsResults_, float** attResults_) : dsResults(dsResults_), attResults(attResults_) {}
+    Results() {}
 };
 
 
@@ -56,7 +56,7 @@ class ResultsContainer {
     std::string* datasetNames;
 
     /** Results for each data set. */
-    float** results;
+    Results* results;
 
     /** Number of data sets for which there are valid results. */
     int numberOfDatasets;
@@ -78,10 +78,10 @@ public:
         numberOfDatasets = 0;
         capacity         = MIN_CAPACITY;
         datasetNames     = new std::string [ MIN_CAPACITY ];
-        results          = new float* [ MIN_CAPACITY ];
+        results          = new Results [ MIN_CAPACITY ];
 
         for ( int i = 0; i < MIN_CAPACITY; i++ ) {
-            results[i] = 0;
+            results[i] = Results();
         }
         
     } // end ResultsContainer
@@ -92,7 +92,7 @@ public:
     	int i;
 
         for ( i = 0; i < numberOfDatasets; i++ ) {
-            delete [] results[i];
+            delete [] &results[i];
         }
 
         delete [] datasetNames;
@@ -105,13 +105,13 @@ public:
      * @param datasetName is the name of the data set for which the result is provided.
      * @param elem is a float* with the results.
      */
-    void addElement ( std::string datasetName, float* elem ) {
+    void addElement ( std::string datasetName, Results elem ) {
 
         int i;
 
         if ( numberOfDatasets >= capacity ) {
             std::string* newDatasetNames = new std::string [ capacity + INC_CAPACITY ];
-            float** newResults      = new float* [ capacity + INC_CAPACITY ];
+            Results* newResults      = new Results [ capacity + INC_CAPACITY ];
             
             for ( i = 0; i < capacity; i++ ) {
                 newDatasetNames[i] = datasetNames[i];
@@ -138,13 +138,13 @@ public:
      * @param position is the position of the data set to be consulted.
      * @return A float* with the results.
      */
-    float* getResult ( int position ) {
+    Results getResult ( int position ) {
 
         if ( position >= 0 && position < capacity ) {
             return results[ position ];
         }
 
-        return 0;
+        return Results();
 
     } // end getResult
 
