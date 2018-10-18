@@ -401,7 +401,7 @@ Results runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& o
 
     std::cout << std::endl << "  > END OF COMPLEXITY MEASURES PROCESSING " << std::endl << std::endl;
     
-    return Results(results, attResults, dSet->getNumberOfAttributes ());
+    return Results(results, attResults, dSet->getNumberOfAttributes (), dSet->attName);
 
 } // end runMeasuresForASingleDataset
 
@@ -764,7 +764,7 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
         if ( opts.getF3 () ) {
             fout << "<AF3>" << std::endl;
             for (int i=0; i < resultsOneRun.numAttr; ++i){
-                fout << "<" << i << ">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</" << i << ">" << std::endl;
+                fout << "<" << resultsOneRun.attrNames[i] << ">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</" << resultsOneRun.attrNames[i] << ">" << std::endl;
             }
             fout << "</AF3>" << std::endl;
         } 

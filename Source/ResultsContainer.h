@@ -45,9 +45,10 @@ class Results {
     float* dsResults;
     float** attResults;
     int numAttr;
+    std::string* attrNames;
 
-    Results(float* dsResults_, float** attResults_, int numAttr_) :
-    dsResults(dsResults_), attResults(attResults_), numAttr(numAttr_) {}
+    Results(float* dsResults_, float** attResults_, int numAttr_, std::string* attrNames_) :
+    dsResults(dsResults_), attResults(attResults_), numAttr(numAttr_), attrNames(attrNames_) {}
     Results() {}
 };
 
