@@ -259,6 +259,10 @@ int Dataset::getNumberOfClasses () {
 } // end getNumberOfClasses
 
 
+std::string* Dataset::getAttrNames () {
+    return attName
+}
+
 //// READ DATA
 
 void Dataset::readData ( std::ifstream& fin, bool readAttInfo ) {

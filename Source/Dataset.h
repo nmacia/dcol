@@ -351,6 +351,11 @@ protected:
     void readAttributeInformation ( std::string& s, StringTokenizer& st, int attCount );
 
     /**
+     * Get attribute names
+     */
+    std::string* getAttrNames ();
+
+    /**
      * Transforms the string into lower case.
      * @param s is the string that will be transformed into lower case.
      */
