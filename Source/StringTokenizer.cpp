@@ -38,7 +38,7 @@ StringTokenizer::StringTokenizer ( std::string str, std::string sep = " " ) {
     count = 0;
     int i = 0, j = 0;
     
-    char s_aux[ MAX_STRING ];
+    char s_aux[ str.size() ];
 
     // Discard while having the delimiter.
     while ( i < ( int ) str.size () && ( str[i] == sep[0] || str[i] == '\n' || str[i] == ' ' || str[i] == '\t' ) ) i++;
@@ -70,7 +70,7 @@ StringTokenizer::StringTokenizer ( std::string str, std::string sep = " ", std::
     index = 0;
     count = 0;
     int i = 0, j = 0;
-    char s_aux[ MAX_STRING ];
+    char s_aux[ str.size() ];
 
     // Discard while having the delimiter.
     while ( i < ( int ) str.size () && ( str[i] == sep[0] || str[i] == sep2[0] || str[i] == '\n' || str[i] == ' ' || str[i] == '\t' ) ) i++;

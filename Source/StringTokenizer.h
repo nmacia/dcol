@@ -54,9 +54,6 @@ private:
     /** Counter of tokens. */
     int count;
 
-    /** Maximum size of a string value represented by a char*/
-    static const int MAX_STRING = 1000;
-
 public:
 
     /**
