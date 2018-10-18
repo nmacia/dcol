@@ -244,9 +244,9 @@ Results runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& o
         }
 
         std::cout <<  "      > Maximum (individual) efficiency of attributes: " << measureResult << std::endl;
-        delete [] vectorResults;
         results[ CF3 ] = measureResult;
         attResults[ AF3 ] = vectorResults;
+        delete [] vectorResults;
 
         if ( opts.getF4 () ) {
             std::cout <<  "      > Collective efficiency of attributes: " << measureResultAux << std::endl;
@@ -1024,9 +1024,6 @@ void run ( InputOptions& opts ) {
             }
 
             // Delete memory.
-            for ( i = 0; i < numberOfDatasets; i++ ) {
-                delete [] &resultsArray[i];
-            }
             delete [] datasetNames;
             delete [] resultsArray;
 

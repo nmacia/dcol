@@ -89,12 +89,6 @@ public:
     /** Destructs the ResultsContainer object. */
     ~ResultsContainer () {
 
-    	int i;
-
-        for ( i = 0; i < numberOfDatasets; i++ ) {
-            delete [] &results[i];
-        }
-
         delete [] datasetNames;
         delete [] results;
         
