@@ -737,34 +737,38 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
         float* dsResults = resultsOneRun.dsResults;
         float** attResults = resultsOneRun.attResults;
 
-        if ( opts.getF1 () ) fout << "<F1> " << ( ( dsResults[ CF1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF1 ] < MIN_PRINTFLOAT && dsResults[ CF1 ] != -1 && dsResults[ CF1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF1 ] << " </F1>" << std::endl; 
+        fout << "<DatasetMeta>" << std::endl;
+        if ( opts.getF1 () ) fout << "<F1>" << ( ( dsResults[ CF1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF1 ] < MIN_PRINTFLOAT && dsResults[ CF1 ] != -1 && dsResults[ CF1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF1 ] << "</F1>" << std::endl; 
 
-        if ( opts.getF1v () ) fout << "<F1v> " << ( ( dsResults[ CF1v ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF1v ] < MIN_PRINTFLOAT && dsResults[ CF1v ] != -1 && dsResults[ CF1v ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF1v ] << " </F1v>" << std::endl; 
+        if ( opts.getF1v () ) fout << "<F1v>" << ( ( dsResults[ CF1v ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF1v ] < MIN_PRINTFLOAT && dsResults[ CF1v ] != -1 && dsResults[ CF1v ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF1v ] << "</F1v>" << std::endl; 
      
-        if ( opts.getF2 () ) fout << "<F2> " << ( ( dsResults[ CF2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF2 ] < MIN_PRINTFLOAT && dsResults[ CF2 ] != -1 && dsResults[ CF2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF2 ] << " </F2>" << std::endl; 
+        if ( opts.getF2 () ) fout << "<F2>" << ( ( dsResults[ CF2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF2 ] < MIN_PRINTFLOAT && dsResults[ CF2 ] != -1 && dsResults[ CF2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF2 ] << "</F2>" << std::endl; 
 
-        if ( opts.getF3 () ) fout << "<F3> " << ( ( dsResults[ CF3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF3 ] < MIN_PRINTFLOAT && dsResults[ CF3 ] != -1 && dsResults[ CF3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF3 ] << " </F3>" << std::endl; 
+        if ( opts.getF3 () ) fout << "<F3>" << ( ( dsResults[ CF3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF3 ] < MIN_PRINTFLOAT && dsResults[ CF3 ] != -1 && dsResults[ CF3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF3 ] << "</F3>" << std::endl; 
 
-        if ( opts.getF4 () ) fout << "<F4> " << ( ( dsResults[ CF4 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF4 ] < MIN_PRINTFLOAT && dsResults[ CF4 ] != -1 && dsResults[ CF4 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF4 ] << " </F4>" << std::endl; 
+        if ( opts.getF4 () ) fout << "<F4>" << ( ( dsResults[ CF4 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF4 ] < MIN_PRINTFLOAT && dsResults[ CF4 ] != -1 && dsResults[ CF4 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF4 ] << "</F4>" << std::endl; 
 
-        if ( opts.getL1 () ) fout << "<L1> " << ( ( dsResults[ CL1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL1 ] < MIN_PRINTFLOAT && dsResults[ CL1 ] != -1 && dsResults[ CL1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL1 ] << " </L1>" << std::endl; 
+        if ( opts.getL1 () ) fout << "<L1>" << ( ( dsResults[ CL1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL1 ] < MIN_PRINTFLOAT && dsResults[ CL1 ] != -1 && dsResults[ CL1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL1 ] << "</L1>" << std::endl; 
 
-        if ( opts.getL2 () ) fout << "<L2> " << ( ( dsResults[ CL2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL2 ] < MIN_PRINTFLOAT && dsResults[ CL2 ] != -1 && dsResults[ CL2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL2 ] << " </L2>" << std::endl; 
+        if ( opts.getL2 () ) fout << "<L2>" << ( ( dsResults[ CL2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL2 ] < MIN_PRINTFLOAT && dsResults[ CL2 ] != -1 && dsResults[ CL2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL2 ] << "</L2>" << std::endl; 
 
-        if ( opts.getL3 () ) fout << "<L3> " << ( ( dsResults[ CL3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL3 ] < MIN_PRINTFLOAT && dsResults[ CL3 ] != -1 && dsResults[ CL3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL3 ] << " </L3>" << std::endl; 
+        if ( opts.getL3 () ) fout << "<L3>" << ( ( dsResults[ CL3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CL3 ] < MIN_PRINTFLOAT && dsResults[ CL3 ] != -1 && dsResults[ CL3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CL3 ] << "</L3>" << std::endl; 
 
-        if ( opts.getN1 () ) fout << "<N1> " << ( ( dsResults[ CN1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN1 ] < MIN_PRINTFLOAT && dsResults[ CN1 ] != -1 && dsResults[ CN1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN1 ] << " </N1>" << std::endl; 
+        if ( opts.getN1 () ) fout << "<N1>" << ( ( dsResults[ CN1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN1 ] < MIN_PRINTFLOAT && dsResults[ CN1 ] != -1 && dsResults[ CN1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN1 ] << "</N1>" << std::endl; 
 
-        if ( opts.getN2 () ) fout << "<N2> " << ( ( dsResults[ CN2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN2 ] < MIN_PRINTFLOAT && dsResults[ CN2 ] != -1 && dsResults[ CN2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN2 ] << " </N2>" << std::endl; 
+        if ( opts.getN2 () ) fout << "<N2>" << ( ( dsResults[ CN2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN2 ] < MIN_PRINTFLOAT && dsResults[ CN2 ] != -1 && dsResults[ CN2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN2 ] << "</N2>" << std::endl; 
 
-        if ( opts.getN3 () ) fout << "<N3> " << ( ( dsResults[ CN3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN3 ] < MIN_PRINTFLOAT && dsResults[ CN3 ] != -1 && dsResults[ CN3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN3 ] << " </N3>" << std::endl; 
+        if ( opts.getN3 () ) fout << "<N3>" << ( ( dsResults[ CN3 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN3 ] < MIN_PRINTFLOAT && dsResults[ CN3 ] != -1 && dsResults[ CN3 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN3 ] << "</N3>" << std::endl; 
 
-        if ( opts.getN4 () ) fout << "<N4> " << ( ( dsResults[ CN4 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN4 ] < MIN_PRINTFLOAT && dsResults[ CN4 ] != -1 && dsResults[ CN4 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN4 ] << " </N4>" << std::endl; 
+        if ( opts.getN4 () ) fout << "<N4>" << ( ( dsResults[ CN4 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CN4 ] < MIN_PRINTFLOAT && dsResults[ CN4 ] != -1 && dsResults[ CN4 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CN4 ] << "</N4>" << std::endl; 
 
-        if ( opts.getT1 () ) fout << "<T1> " << ( ( dsResults[ CT1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CT1 ] < MIN_PRINTFLOAT && dsResults[ CT1 ] != -1 && dsResults[ CT1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CT1 ] << " </T1>" << std::endl; 
+        if ( opts.getT1 () ) fout << "<T1>" << ( ( dsResults[ CT1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CT1 ] < MIN_PRINTFLOAT && dsResults[ CT1 ] != -1 && dsResults[ CT1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CT1 ] << "</T1>" << std::endl; 
 
-        if ( opts.getT2 () ) fout << "<T2> " << ( ( dsResults[ CT2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CT2 ] < MIN_PRINTFLOAT && dsResults[ CT2 ] != -1 && dsResults[ CT2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CT2 ] << " </T2>" << std::endl; 
+        if ( opts.getT2 () ) fout << "<T2>" << ( ( dsResults[ CT2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CT2 ] < MIN_PRINTFLOAT && dsResults[ CT2 ] != -1 && dsResults[ CT2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CT2 ] << "</T2>" << std::endl; 
 
+        fout << "</DatasetMeta>" << std::endl;
+
+        fout << "<AttributeMeta>" << std::endl;
         if ( opts.getF3 () ) {
             fout << "<AF3>" << std::endl;
             for (int i=0; i < resultsOneRun.numAttr; ++i){
@@ -772,6 +776,7 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
             }
             fout << "</AF3>" << std::endl;
         } 
+        fout << "</AttributeMeta>" << std::endl;
         /** 
         [NEW COMPLEXITY MEASURE]
         In case to implement a new complexity measure, please follow the structure indicated below by replacing the information in brackets.
