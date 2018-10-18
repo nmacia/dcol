@@ -402,7 +402,7 @@ Results runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& o
 
     std::cout << std::endl << "  > END OF COMPLEXITY MEASURES PROCESSING " << std::endl << std::endl;
     
-    return Results(results, attResults);
+    return Results(results, attResults, dSet->getNumberOfAttributes ());
 
 } // end runMeasuresForASingleDataset
 

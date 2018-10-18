@@ -44,8 +44,10 @@ class Results {
   public:
     float* dsResults;
     float** attResults;
+    int numAttr;
 
-    Results(float* dsResults_, float** attResults_) : dsResults(dsResults_), attResults(attResults_) {}
+    Results(float* dsResults_, float** attResults_, int numAttr_) :
+    dsResults(dsResults_), attResults(attResults_), numAttr(numAttr_) {}
     Results() {}
 };
 
