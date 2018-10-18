@@ -397,11 +397,14 @@ Results runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& o
         std::cout << "      > [Measure]: " << results[ [Counter] ] << std::endl;
     */
     int numAttr = dSet->getNumberOfAttributes();
-    std::string* attrNames = dSet->getAttrNames();
+    std::string* attrNames = new std::string [numAttr];
+    // copy the array contents, otherwise they will be deleted when deleting dSet
+    for (int i=0; i < numAttr; ++i){
+        attrNames[i] = dSet->getAttrNames()[i];
+    }
     delete dSet;
-
     std::cout << std::endl << "  > END OF COMPLEXITY MEASURES PROCESSING " << std::endl << std::endl;
-    
+
     return Results(results, attResults, numAttr, attrNames);
 
 } // end runMeasuresForASingleDataset
@@ -765,7 +768,6 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
         if ( opts.getF3 () ) {
             fout << "<AF3>" << std::endl;
             for (int i=0; i < resultsOneRun.numAttr; ++i){
-                std::cout << resultsOneRun.attrNames[i] << std::endl;
                 fout << "<" << resultsOneRun.attrNames[i] << ">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</" << resultsOneRun.attrNames[i] << ">" << std::endl;
             }
             fout << "</AF3>" << std::endl;
