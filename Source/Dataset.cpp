@@ -602,7 +602,7 @@ void Dataset::getBasicInfo ( std::string& fileName, bool readAttInfo ) {
             numOfDefinedAttributes ++;
             numberOfAttributes ++;
             if ( readAttInfo ) {
-                StringTokenizer st ( line, " ", "{" );
+                StringTokenizer st ( line, "\"", "{" );
                 st.getNextToken();
                 lastAttribute = st.getNextToken();
             }
@@ -714,7 +714,7 @@ void Dataset::readAttributes ( std::ifstream& fin, bool readAttInfo, bool readSt
         }
         else if ( toLowerCase ( line ).find ( "@attribute" ) != std::string::npos && readAttInfo ) {
 
-            StringTokenizer st2 ( line, " ", "{" );
+            StringTokenizer st2 ( line, "\"", "{" );
 
             // Do not mind about the first token (is @attribute).
             st2.getNextToken ();

@@ -732,7 +732,7 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
         
         fout << "<Dataset>" << std::endl;
 
-        fout << "<Name> " << results.getDatasetName ( i ) << " </Name> " << std::endl;
+        fout << "<Name>" << results.getDatasetName ( i ) << "</Name>" << std::endl;
         resultsOneRun = results.getResult ( i );
         float* dsResults = resultsOneRun.dsResults;
         float** attResults = resultsOneRun.attResults;
@@ -772,7 +772,7 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
         if ( opts.getF3 () ) {
             fout << "<AF3>" << std::endl;
             for (int i=0; i < resultsOneRun.numAttr; ++i){
-                fout << "<" << resultsOneRun.attrNames[i] << ">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</" << resultsOneRun.attrNames[i] << ">" << std::endl;
+                fout << "<attribute name=\"" << resultsOneRun.attrNames[i] << "\">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</attribute>" << std::endl;
             }
             fout << "</AF3>" << std::endl;
         } 
