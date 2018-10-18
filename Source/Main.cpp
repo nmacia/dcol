@@ -39,8 +39,8 @@ along with DCoL.  If not, see <http://www.gnu.org/licenses/>.
 #define WIDTH_RES 12
 #define NUM_RESULTS 14
 #define NUM_ATT_RESULTS 1
-#define DECIMAL_PRECISION 3
-#define MIN_PRINTFLOAT 0.0009
+#define DECIMAL_PRECISION 15
+#define MIN_PRINTFLOAT 1e-3
 
 #define CF1  0
 #define CF1v 1
@@ -245,7 +245,6 @@ Results runMeasuresForASingleDataset ( ComplexityMeasures* dSet, InputOptions& o
 
         std::cout <<  "      > Maximum (individual) efficiency of attributes: " << measureResult << std::endl;
         results[ CF3 ] = measureResult;
-        attResults[ AF3 ] = vectorResults;
         delete [] vectorResults;
 
         if ( opts.getF4 () ) {
