@@ -260,7 +260,7 @@ int Dataset::getNumberOfClasses () {
 
 
 std::string* Dataset::getAttrNames () {
-    return attName
+    return attName;
 }
 
 //// READ DATA

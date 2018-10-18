@@ -250,6 +250,11 @@ public:
     int getNumberOfAttributes ();
 
     /**
+     * Get attribute names
+     */
+    std::string* getAttrNames ();
+
+    /**
      * Returns the number of classes of the data set.
      * @return An integer with the number of classes.
      */
@@ -349,11 +354,6 @@ protected:
      * @param attCount is the number of the current attribute.
      */
     void readAttributeInformation ( std::string& s, StringTokenizer& st, int attCount );
-
-    /**
-     * Get attribute names
-     */
-    std::string* getAttrNames ();
 
     /**
      * Transforms the string into lower case.
