@@ -721,8 +721,7 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
     std::ofstream fout;
     fout.open ( opts.getOutputDatasetName ().append ( ".xml" ).c_str (), std::ofstream::out );
     Results resultsOneRun;
-    float *dsResults;
-
+ 
     fout << "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>" << std::endl; 
     fout << "<ComplexityAnalysis>" << std::endl;
 
@@ -732,7 +731,8 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
 
         fout << "<Name> " << results.getDatasetName ( i ) << " </Name> " << std::endl;
         resultsOneRun = results.getResult ( i );
-        dsResults = resultsOneRun.dsResults;
+        float* dsResults = resultsOneRun.dsResults;
+        float** attResults = resultsOneRun.attResults;
 
         if ( opts.getF1 () ) fout << "<F1> " << ( ( dsResults[ CF1 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CF1 ] < MIN_PRINTFLOAT && dsResults[ CF1 ] != -1 && dsResults[ CF1 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CF1 ] << " </F1>" << std::endl; 
 
@@ -762,6 +762,13 @@ void printXMLFile ( InputOptions& opts, ResultsContainer& results ) {
 
         if ( opts.getT2 () ) fout << "<T2> " << ( ( dsResults[ CT2 ] != -1 ) ? std::setprecision ( DECIMAL_PRECISION ) : std::setprecision ( 0 ) ) << ( ( dsResults[ CT2 ] < MIN_PRINTFLOAT && dsResults[ CT2 ] != -1 && dsResults[ CT2 ] != 0. ) ? std::scientific : std::fixed ) << dsResults[ CT2 ] << " </T2>" << std::endl; 
 
+        if ( opts.getF3 () ) {
+            fout << "<AF3>" << std::endl;
+            for (int i=0; i < resultsOneRun.numAttr; ++i){
+                fout << "<" << i << ">" << std::setprecision ( DECIMAL_PRECISION ) << attResults[AF3][i] << "</" << i << ">" << std::endl;
+            }
+            fout << "</AF3>" << std::endl;
+        } 
         /** 
         [NEW COMPLEXITY MEASURE]
         In case to implement a new complexity measure, please follow the structure indicated below by replacing the information in brackets.
