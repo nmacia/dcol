@@ -821,9 +821,10 @@ void Dataset::readAttributeInformation ( std::string& s, StringTokenizer& st, in
 
     int j;
 
-    if ( toLowerCase ( s ).find ( "real" ) != std::string::npos ||
+    if ( s.find ( "{" ) == std::string::npos &&
+        (toLowerCase ( s ).find ( "real" ) != std::string::npos ||
          toLowerCase ( s ).find ( "integer" ) != std::string::npos || 
-         toLowerCase ( s ).find ( "numeric" ) != std::string::npos ) {
+         toLowerCase ( s ).find ( "numeric" ) != std::string::npos)) {
         // The next token is the type. We supose that it only can be a character, integer, or real.
         std::string type = toLowerCase ( st.getNextToken () );
 
@@ -833,8 +834,7 @@ void Dataset::readAttributeInformation ( std::string& s, StringTokenizer& st, in
         numberOfContinuousAttributes ++;
 
         if ( Utils::doScreenStatistics )
-            std::cout << "      > Type of representation: " << typeOfRepresentation[ attCount ] << std::endl;
-
+            std::cout << attName[attCount] << " --> " << typeOfRepresentation[ attCount ] << std::endl;
         // Get the attributes boundaries if they exist.
         if ( s.find ( "[" ) == std::string::npos ) { // They do not exist.
             minAttValue[ attCount ] = FLT_MAX;
@@ -869,8 +869,7 @@ void Dataset::readAttributeInformation ( std::string& s, StringTokenizer& st, in
         numberOfContinuousAttributes ++;
 
         if ( Utils::doScreenStatistics ) 
-            std::cout << "      > Type of representation: " << typeOfRepresentation[ attCount ] << std::endl;
-
+            std::cout << attName[attCount] << " --> " << typeOfRepresentation[ attCount ] << std::endl;
     }
     else if ( s.find ( "{" ) != std::string::npos ) { // It is a nominal.
     
@@ -885,7 +884,7 @@ void Dataset::readAttributeInformation ( std::string& s, StringTokenizer& st, in
         }
 
         if ( Utils::doScreenStatistics )
-            std::cout << "      > Type of representation: " << typeOfRepresentation[ attCount ] << std::endl;
+            std::cout << attName[attCount] << " --> " << typeOfRepresentation[ attCount ] << std::endl;
 
         s = s.substr ( s.find_first_of ( "{" ) + 1, s.find_first_of ( "}" ) - s.find_first_of ( "{" ) - 1 );
 
