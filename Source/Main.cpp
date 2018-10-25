@@ -1090,6 +1090,6 @@ int main ( int argc, char** argv ) {
     // Run depending on the options.
     run ( opts );
 
-    return 1;
+    return 0;
 
 } // end main
