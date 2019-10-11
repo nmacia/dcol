@@ -1,2 +1,4 @@
 # Compiled code
-*.out
+*.o
+*.o.tmp
+dcol
