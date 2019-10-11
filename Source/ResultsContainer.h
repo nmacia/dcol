@@ -175,7 +175,7 @@ public:
             }
             else { // Build a name of 30 characters.
                 if ( datasetNames[ position ].size () < ( unsigned int ) maxSize ) {
-                    for ( i = 0; i < abs ( maxSize - datasetNames[ position ].size () ) - 1; i++ ) {
+                    for ( i = 0; i < fabs ( maxSize - datasetNames[ position ].size () ) - 1; i++ ) {
                         shortName += " ";
                     }
                 }
