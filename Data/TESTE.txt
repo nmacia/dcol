@@ -1,0 +1,19 @@
+TABLE LEGEND
+  F1:  Maximum Fisher's discriminant ratio 
+  F1v: Directional-vector maximum Fisher's discriminant ratio 
+  F2:  Overlap of the per-class bounding boxes 
+  F3:  Maximum (individual) feature efficiency 
+  F4:  Collective feature efficiency (sum of each feature efficiency) 
+  L1:  Minimized sum of the error distance of a linear classifier (linear SMO) 
+  L2:  Training error of a linear classifier (linear SMO) 
+  L3:  Nonlinearity of a linear classifier (linear SMO) 
+  N1:  Fraction of points on the class boundary 
+  N2:  Ratio of average intra/inter class nearest neighbor distance 
+  N3:  Leave-one-out error rate of the one-nearest neighbor classifier 
+  N4:  Nonlinearity of the one-nearest neighbor classifier 
+  T1:  Fraction of maximum covering spheres 
+  T2:  Average number of points per dimension 
+
+
+DATA SET                               F1         F1v          F2          F3          F4          L1          L2          L3          N1          N2          N3          N4          T1          T2
+../Data/iris.dat                   16.041          -1       0.054       0.573       0.573          -1          -1          -1       0.100       0.212       0.047       0.030       0.893      37.500
