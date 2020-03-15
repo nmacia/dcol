@@ -1,0 +1,18 @@
+      > [WARNING F1] Applying the maximum Fisher discriminant ratio to a 3-class data set. 
+         >> It is strongly recommended to activate option -d to consider the effect of each individual class. 
+ 
+      > [ERROR F1v] The directional-vector maximum Fisher's discriminant ratio can only be applied to two-class data sets. 
+ 
+      > [WARNING F3] Applying Maximum efficiency to a 3-class data set. 
+         >> The meaning of the result provided by this measure may not reflect the efficiency for each class since averages are provided. 
+         >> It is strongly recommended to activate option -d to consider the effect of each individual class. 
+ 
+      > [ERROR L1] The linear discriminant can only be applied to two-class data sets. 
+         >> The current data set 'iris' has 3; thus, the measure will not be applied. 
+ 
+      > [ERROR L2] The linear discriminant can only be applied to two-class data sets. 
+         >> The current data set 'iris' has 3; thus, the measure will not be applied. 
+ 
+      > [ERROR L3] The linear discriminant can only be applied to two-class data sets. 
+         >> The current data set 'iris' has 3; thus, the measure will not be applied. 
+ 

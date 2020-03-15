@@ -1,0 +1,4 @@
+# Compiled code
+*.o
+*.o.tmp
+dcol
